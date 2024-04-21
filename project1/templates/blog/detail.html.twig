@@ -1,0 +1,39 @@
+{# templates/blog/detail.html.twig #}
+
+{# {% extends 'base.html.twig' %}
+
+{% block title %}Détails de l'Article{{ detail.title }}
+{% endblock %}
+
+{% block body %}
+	<h1>{{ detail.title }}</h1>
+	<p>
+		<strong>Auteur:</strong>
+		{{ detail.author }}</p>
+	<p>
+		<strong>Date de Publication:</strong>
+		{{ detail.date|date('d/m/Y') }}</p>
+	<p>{{ detail.content }}</p>
+{% endblock %} #}
+
+{% extends 'base.html.twig' %}{% block title %}
+	Détails de l'Article
+{{ detail.title }}
+{% endblock %}
+
+	{% block body %}
+		<div class="article-details"> <h1 class="article-title">{{ detail.title }}</h1>
+		<p class="article-author">
+			<strong>Auteur:</strong>
+			{{ detail.author }}
+		</p>
+		<p class="article-date">
+			<strong>Date de Publication:</strong>
+			{{ detail.date|date('d/m/Y') }}
+		</p>
+		<div class="article-content">
+			<p>{{ detail.content }}</p>
+		</div>
+	</div>
+	<a href="{{ path('blog') }}" class="btn btn-primary">Retour à la liste des articles</a>
+{% endblock %}

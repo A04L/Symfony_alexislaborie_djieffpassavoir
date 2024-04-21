@@ -1,0 +1,50 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+
+blog_index:
+    path: /blog
+    controller: App\Controller\BlogController::blog
+
+blog_detail:
+    path: /blog/{id}
+    controller: App\Controller\BlogController::detailAction
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_login_check:
+    path: /login_check
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+  
+  
+   # routes pour la gestion de blogs # 
+
+    # Route pour afficher le formulaire d'ajout de blog
+add_blog:
+    path: /formulaire/add
+    controller: App\Controller\BlogController::add
+
+add_blog_submit:
+    path: /formulaire/add
+    controller: App\Controller\BlogController::addSubmit
+    methods: ['POST']
+
+
+# Route pour afficher la page de suppression de blog
+delete_blog:
+    path: /blog/delete
+    controller: App\Controller\BlogController::delete
+
+# Route pour traiter la suppression de blog
+delete_blog_submit:
+    path: /blog/delete
+    controller: App\Controller\BlogController::deleteSubmit

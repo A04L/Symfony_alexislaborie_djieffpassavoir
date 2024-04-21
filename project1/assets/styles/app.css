@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(218, 135, 235);
+}
+
+/* index twig */
+.main-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.article-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.article-item {
+    margin-bottom: 10px;
+}
+
+.article-link {
+    text-decoration: none;
+    color: #007bff;
+    /* Couleur de lien par défaut, vous pouvez la modifier selon vos besoins */
+}
+
+.article-link:hover {
+    text-decoration: underline;
+}
+
+
+/* détail twig*/
+.article-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.article-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.article-author,
+.article-date {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.article-content {
+    margin-top: 20px;
+}
