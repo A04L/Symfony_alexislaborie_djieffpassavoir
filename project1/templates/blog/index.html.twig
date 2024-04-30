@@ -27,6 +27,7 @@
 {% block title %}Liste des Articles{% endblock %}
 
 {% block body %}
+{% include 'navigation.html.twig' %}
    {% if app.user %}
         <div class="mb-3">
             You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
@@ -36,7 +37,10 @@
     <ul class="article-list">
         {% for article in post %}
             <li class="article-item">
-                <a href="{{ path('detail', {'id': article.id}) }}" class="article-link">{{ article.title }}</a>
+                <a href="{{ path('detail', {'id': article.id}) }}" class="article-link">
+                <img src="images/icon.png" alt="Icone document">
+                {{ article.title }}</a>
+
                  {% if is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('blog_delete', {'id': article.id}) }}">Supprimer</a>
                 {% endif %}

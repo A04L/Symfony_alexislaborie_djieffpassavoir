@@ -1,27 +1,45 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
 }
 
-/* index twig /
+/* index twig */
 .main-title {
-    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
 .article-list {
     list-style-type: none;
-    padding: 0;
+    padding: 5px;
+    margin-bottom: 50px;
+    margin-left: 50px;
 }
 
 .article-item {
     margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.article-item a {
+    display: flex;
+    align-items: center;
+}
+
+.article-item img {
+    width: 50Px;
+    height: auto;
 }
 
 .article-link {
     text-decoration: none;
     color: #007bff;
-    / Couleur de lien par défaut, vous pouvez la modifier selon vos besoins /
+    margin-right: 10px;
+    /* Couleur de lien par défaut, vous pouvez la modifier selon vos besoins */
 }
 
 .article-link:hover {
@@ -29,7 +47,7 @@ body {
 }
 
 
-/ détail twig*/
+/* détail twig*/
 .article-details {
     max-width: 800px;
     margin: 0 auto;
@@ -54,7 +72,7 @@ body {
     margin-top: 20px;
 }
 
-
+/*formulaire connexion / inscription*/
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -101,15 +119,17 @@ label {
 
 .btn-primary {
     margin: auto;
-    width: 70%;
-    padding: 10px;
+    width: 100%;
+    padding: 17px;
+    margin: 5px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
 .btn-primary:hover {
@@ -123,4 +143,204 @@ label {
 
 .btn-link:hover {
     text-decoration: underline;
+}
+
+/* blog */
+
+.containerarticle {
+    max-width: 700px;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#containerblog {
+    max-width: 100%;
+    background-color: red;
+    display: flex;
+}
+
+/* Styles de la navigation */
+nav {
+    background-color: #4280dd;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #ffffff;
+    border-bottom: solid 2px #ffffff;
+}
+
+.article-details {
+    margin-top: 50px;
+}
+
+#containerhome {
+    position: relative;
+    background-image: url('/images/fond.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    padding: 20px;
+}
+
+#containerhome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0e1f2ca9;
+    z-index: 1;
+    /* Pour s'assurer que le fond noir est au-dessus de l'image de fond */
+}
+
+#titrepa {
+    position: relative;
+    font-size: 40px;
+    margin-top: 300px;
+    padding: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    z-index: 10;
+}
+
+#containercategorie {
+    width: 80%;
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    text-align: center;
+    padding: 100px;
+    background-color: #4280dd;
+    border-radius: 20px;
+}
+
+#categorie1 {
+    position: relative;
+    width: 30%;
+    height: 200px;
+    background-image: url('/images/jv.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    margin: 20px;
+    margin: auto;
+}
+
+#categorie1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #616161a9;
+    z-index: 0;
+    border-radius: 15px;
+
+}
+
+#categorie2 {
+    position: relative;
+    width: 30%;
+    height: 200px;
+    background-image: url('/images/foot.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    margin: 20px;
+    margin: auto;
+}
+
+#categorie2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #616161a9;
+    z-index: 0;
+    border-radius: 15px;
+
+}
+
+#categorie3 {
+    position: relative;
+    width: 30%;
+    height: 200px;
+    background-image: url('/images/anime.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    margin: 20px;
+    margin: auto;
+}
+
+#categorie3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #616161a9;
+    z-index: 0;
+    border-radius: 15px;
+
+}
+
+h2 {
+    position: relative;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    z-index: 10;
+}
+
+#containertxt {
+    text-align: left;
+}
+
+#titretxt {
+    position: relative;
+    font-size: 30px;
+    margin-top: 100px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4280dd;
+}
+
+#containerp {
+    text-align: center;
+    margin: 80px;
 }

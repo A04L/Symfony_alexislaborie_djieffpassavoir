@@ -1,26 +1,31 @@
 {# templates/index.html.twig #}
 
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Mon Site</title>
-	</head>
-	<body>
+{% include 'navigation.html.twig' %}
+<div id="containerhome">
+	<h1 id="titrepa">Découvrez un monde d'articles divers et captivants. Explorez, apprenez et laissez-vous inspirer par chaque page de notre site !</h1>
+</div>
+<div id="containertxt">
 
-		{% include 'navigation.html.twig' %}
-
-		<h1>Bienvenue sur Mon Site !</h1>
-		<p>Contenu de votre page d'accueil ici...</p>
-		<p>
-			Si vous souhaitez accéder au blog, veuillez
-			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-				<a href="{{ path('blog_index') }}">cliquer ici</a>.
-			{% else %}
-				<a href="{{ path('app_login') }}">vous connecter</a>
-				d'abord.
-			{% endif %}
-		</p>
-	</body>
-</html>
+	<h1 id="titretxt">Explorez notre site pour accéder aux derniers articles passionnants sur le monde du gaming, du football et des animes.</h1>
+</div>
+<div id="containercategorie">
+	<div id="categorie1">
+		<h2>Gaming</h2>
+	</div>
+	<div id="categorie2">
+		<h2>Foot</h2>
+	</div>
+	<div id="categorie3">
+		<h2>Animes</h2>
+	</div>
+</div>
+<div id="containerp">
+	<p>
+		Si vous souhaitez accéder au blog, veuillez
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			<a href="{{ path('blog_index') }}">cliquer ici</a>.
+		{% else %}
+			<a href="{{ path('app_login') }}" class="btn btn-primary mb-3">vous connecter</a>
+		{% endif %}
+	</p>
+</div></body></html></html>

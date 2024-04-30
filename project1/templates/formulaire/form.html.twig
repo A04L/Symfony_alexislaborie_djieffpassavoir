@@ -4,26 +4,29 @@
 {% endblock %}
 
 {% block body %}
-	<h1 class="main-title">Ajouter un Article</h1>
+	{% include 'navigation.html.twig' %}
+	<div class="container">
+		<h1 class="main-title">Ajouter un Article</h1>
 
-	<form method="post" action="{{ path('add_blog_submit') }}">
-		<div class="mb-3">
-			<label for="title" class="form-label">Titre</label>
-			<input type="text" class="form-control" id="title" name="title" required>
+		<form method="post" action="{{ path('add_blog_submit') }}">
+			<div class="container2">
+				<label for="title" class="form-label">Titre</label>
+				<input type="text" class="form-control" id="title" name="title" required>
+			</div>
+			<div class="container2">
+				<label for="content" class="form-label">Contenu</label>
+				<textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+			</div>
+			<div class="container2">
+				<label for="date" class="form-label">Date</label>
+				<input type="date" class="form-control" id="date" name="date" required>
+			</div>
+			<div class="container2">
+				<label for="author" class="form-label">Auteur</label>
+				<input type="text" class="form-control" id="author" name="author" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Ajouter</button>
 		</div>
-		<div class="mb-3">
-			<label for="content" class="form-label">Contenu</label>
-			<textarea class="form-control" id="content" name="content" rows="5" required></textarea>
-		</div>
-		<div class="mb-3">
-			<label for="date" class="form-label">Date</label>
-			<input type="date" class="form-control" id="date" name="date" required>
-		</div>
-		<div class="mb-3">
-			<label for="author" class="form-label">Auteur</label>
-			<input type="text" class="form-control" id="author" name="author" required>
-		</div>
-		<button type="submit" class="btn btn-primary">Ajouter</button>
 	</form>
 
 	<a id="button" href="{{ path('blog_index') }}">Revenir à l'administration</a>

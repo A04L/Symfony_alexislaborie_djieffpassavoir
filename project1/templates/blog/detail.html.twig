@@ -16,12 +16,14 @@
 	<p>{{ detail.content }}</p>
 {% endblock %} #}
 
-{% extends 'base.html.twig' %}{% block title %}
+{% extends 'base.html.twig' %}
+	{% block title %}
 	Détails de l'Article
 {{ detail.title }}
 {% endblock %}
 
 	{% block body %}
+	{% include 'navigation.html.twig' %}
 		<div class="article-details"> <h1 class="article-title">{{ detail.title }}</h1>
 		<p class="article-author">
 			<strong>Auteur:</strong>
