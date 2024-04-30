@@ -1,8 +1,9 @@
 body {
-    background-color: rgb(218, 135, 235);
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
 }
 
-/* index twig */
+/* index twig /
 .main-title {
     font-size: 24px;
     margin-bottom: 20px;
@@ -20,7 +21,7 @@ body {
 .article-link {
     text-decoration: none;
     color: #007bff;
-    /* Couleur de lien par défaut, vous pouvez la modifier selon vos besoins */
+    / Couleur de lien par défaut, vous pouvez la modifier selon vos besoins /
 }
 
 .article-link:hover {
@@ -28,7 +29,7 @@ body {
 }
 
 
-/* détail twig*/
+/ détail twig*/
 .article-details {
     max-width: 800px;
     margin: 0 auto;
@@ -51,4 +52,75 @@ body {
 
 .article-content {
     margin-top: 20px;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container2 {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
 }

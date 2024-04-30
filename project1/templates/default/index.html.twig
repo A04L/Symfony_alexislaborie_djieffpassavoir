@@ -1,0 +1,26 @@
+{# templates/index.html.twig #}
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mon Site</title>
+	</head>
+	<body>
+
+		{% include 'navigation.html.twig' %}
+
+		<h1>Bienvenue sur Mon Site !</h1>
+		<p>Contenu de votre page d'accueil ici...</p>
+		<p>
+			Si vous souhaitez accéder au blog, veuillez
+			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+				<a href="{{ path('blog_index') }}">cliquer ici</a>.
+			{% else %}
+				<a href="{{ path('app_login') }}">vous connecter</a>
+				d'abord.
+			{% endif %}
+		</p>
+	</body>
+</html>

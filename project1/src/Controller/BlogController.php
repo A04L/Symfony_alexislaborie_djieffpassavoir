@@ -97,6 +97,6 @@ class BlogController extends AbstractController
         $entityManager->flush();
 
         // Redirection vers la page de blog après l'ajout de l'article
-        return $this->redirectToRoute('blog_index');
+        return $this->redirectToRoute('index');
     }
 }
